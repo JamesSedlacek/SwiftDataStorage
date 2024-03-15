@@ -205,7 +205,7 @@ struct ContentView: View {
                 Text(model.testProperty)
                     .swipeActions {
                         Button("Delete", role: .destructive) {
-                            viewModel.delete(quake)
+                            viewModel.delete(model)
                         }
                     }
             }
@@ -234,7 +234,7 @@ final class ContentViewModel {
     }
 
     func delete(_ model: MockModel) {
-        _models.remove(quake)
+        _models.remove(model)
     }
 }
 ```
